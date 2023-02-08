@@ -1,5 +1,6 @@
 <template>
-  <main class="p-8 gap-6 bg-olive h-full">
+  <main class="p-8 bg-olive h-screen">
+    <h1 class="font-printed text-3xl pb-10">Digital</h1>
     <section class="flex pt-[100px]">
       <card-base title="Now" subtitle="2/7/23" :color="0" :show-list="true" class="z-30" />
       <card-base title="Later" subtitle="February" :color="1" class="z-20 -ml-[420px] mb-[50px] -mt-[50px]" />
