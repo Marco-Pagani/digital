@@ -5,17 +5,13 @@
       <p>{{ subtitle }}</p>
     </header>
     <ul class="font-handwritten text-xl" v-if="showList">
-      <li v-for="index in 10" :key="index" class="flex w-full gap-6 p-3 rounded-lg mt-3"
-        :class="`focus-within:${focusColors[color]}`">
-        <span>0</span>
-        <input type="text" class=" border-b border-off-black grow px-3"
-          :class="`${bgColors[color]} focus:${focusColors[color]}`" />
-      </li>
+      <card-task v-for="index in 10" :colors="{ base: bgColors[color], focus: focusColors[color] }" :key="index" />
     </ul>
   </div>
 </template>
 
 <script setup>
+import CardTask from './card-task.vue'
 defineProps({
   title: String,
   subtitle: String,
