@@ -9,9 +9,11 @@
     </header>
     <ul class="font-handwritten text-xl" v-if="showList">
       <card-task
-        v-for="index in 10"
+        v-for="(item, index) in cardData"
         :colors="{ base: bgColors[color], focus: focusColors[color] }"
         :key="index"
+        v-model:item-text="item.text"
+        v-model:item-status="item.status"
       />
     </ul>
   </div>
@@ -23,8 +25,10 @@ defineProps({
   title: String,
   subtitle: String,
   color: Number,
-  showList: Boolean
+  showList: Boolean,
+  cardData: Array
 })
+
 const bgColors = ['bg-light-brown', 'bg-medium-brown', 'bg-dark-brown']
 const focusColors = ['bg-medium-brown', 'bg-dark-brown', 'bg-light-brown']
 const textColors = ['text-light-brown', 'text-medium-brown', 'text-dark-brown']

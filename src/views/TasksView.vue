@@ -7,6 +7,7 @@
         subtitle="2/7/23"
         :color="0"
         :show-list="true"
+        :card-data="todos.today"
         class="z-30"
       />
       <div v-show="!expanded" class="contents">
@@ -58,6 +59,10 @@
 <script setup>
 import { ref } from 'vue'
 import CardBase from '../components/card/card-base.vue'
+import { useTodos } from '../stores/tasks'
+
+const todos = useTodos()
+
 const expanded = ref(false)
 </script>
 
