@@ -1,11 +1,18 @@
 <template>
-  <div class="rounded-lg w-[450px] p-6 pt-4 shadow-md" :class="`${bgColors[color]}`">
+  <div
+    class="rounded-lg w-[450px] p-6 pt-4 shadow-md"
+    :class="`${bgColors[color]}`"
+  >
     <header class="flex justify-between">
       <h2 class="text-xl">{{ title }}</h2>
       <p>{{ subtitle }}</p>
     </header>
     <ul class="font-handwritten text-xl" v-if="showList">
-      <card-task v-for="index in 10" :colors="{ base: bgColors[color], focus: focusColors[color] }" :key="index" />
+      <card-task
+        v-for="index in 10"
+        :colors="{ base: bgColors[color], focus: focusColors[color] }"
+        :key="index"
+      />
     </ul>
   </div>
 </template>

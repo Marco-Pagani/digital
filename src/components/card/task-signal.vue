@@ -13,6 +13,6 @@ const icons = [
   ['far', 'circle-dot'],
   ['fas', 'circle-dot'],
   ['far', 'clock'],
-  ['fas', 'circle'],
+  ['fas', 'circle']
 ]
 </script>

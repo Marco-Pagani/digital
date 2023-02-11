@@ -1,7 +1,10 @@
 <template>
   <ul class="flex gap-4 h-[30px] items-center bg-white p-6 pl-3 rounded shadow">
     <li v-for="(icon, index) in icons" :key="index" class="flex justify-center">
-      <font-awesome-icon :icon="icon" @click="$emit('change-icon', index)"></font-awesome-icon>
+      <font-awesome-icon
+        :icon="icon"
+        @click="$emit('change-icon', index)"
+      ></font-awesome-icon>
     </li>
   </ul>
 </template>
@@ -13,6 +16,6 @@ const icons = [
   ['far', 'circle-dot'],
   ['fas', 'circle-dot'],
   ['far', 'clock'],
-  ['fas', 'circle'],
+  ['fas', 'circle']
 ]
 </script>
