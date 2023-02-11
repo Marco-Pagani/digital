@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
+import { format } from 'date-fns'
 
-const getDate = () => new Date().toDateString()
+const getDate = () => format(new Date(), 'MM/dd/yy')
 
 const initTodos = () => [...Array(10)].fill(0).map(() => ({ status: 0, text: '' }))
 
