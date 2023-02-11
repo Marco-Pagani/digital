@@ -9,5 +9,8 @@ export const useTodos = defineStore('todos', {
     eventually: initCard(),
     yesterday: null,
     dailyArchive: []
-  })
+  }),
+  persist: {
+    enabled: true
+  }
 })
