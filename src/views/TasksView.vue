@@ -3,20 +3,23 @@
     <h1 class="font-printed text-3xl pb-10">Digital</h1>
     <section class="flex pt-[100px]">
       <card-base
-        :card-data="todos.today"
+        v-model:card-header="todos.today.header"
+        :card-items="todos.today.items"
         :card-type="0"
         :show-list="true"
         class="z-30"
       />
       <div v-show="!expanded" class="contents">
         <card-base
-          :card-data="todos.later"
+          v-model:card-header="todos.later.header"
+          :card-items="todos.later.items"
           :card-type="1"
           :show-list="false"
           class="z-20 -ml-[420px] mb-[50px] -mt-[50px]"
         />
         <card-base
-          :card-data="todos.eventually"
+          v-model:card-header="todos.eventually.header"
+          :card-items="todos.eventually.items"
           :card-type="2"
           :show-list="false"
           class="z-10 -ml-[420px] mb-[100px] -mt-[100px]"
@@ -24,13 +27,15 @@
       </div>
       <div v-show="expanded" class="contents">
         <card-base
-          :card-data="todos.later"
+          v-model:card-header="todos.later.header"
+          :card-items="todos.later.items"
           :card-type="1"
           :show-list="true"
           class="z-30"
         />
         <card-base
-          :card-data="todos.eventually"
+          v-model:card-header="todos.eventually.header"
+          :card-items="todos.eventually.items"
           :card-type="2"
           :show-list="true"
           class="z-30"
