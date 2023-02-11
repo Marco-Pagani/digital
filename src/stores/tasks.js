@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { format } from 'date-fns'
+import { format, add } from 'date-fns'
 
 const getDate = () => format(new Date(), 'MM/dd/yy')
 
@@ -21,7 +21,9 @@ export const useTodos = defineStore('todos', {
   actions: {
     updateDays() {
       const currentDate = getDate()
+      const previousDate = format(add(new Date(), { days: -1 }), 'MM/dd/yy')
       if (!this.today.header === currentDate) {
+        if (this.today.header === previousDate) this.yesterday = this.today
         this.cardArchive.push(this.today)
         this.today = initCard(currentDate)
       }
