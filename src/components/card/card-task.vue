@@ -46,3 +46,9 @@ const changeIcon = (index) => {
   emit('update:item-status', index)
 }
 </script>
+
+<style>
+input:focus {
+  outline: none;
+}
+</style>
