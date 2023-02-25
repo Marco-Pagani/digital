@@ -1,5 +1,5 @@
 <template>
-  <ul class="flex gap-4 h-[30px] items-center bg-white p-6 pl-3 rounded shadow">
+  <ul class="flex gap-4 h-[30px] items-center bg-white p-6 rounded-full shadow">
     <li v-for="(icon, index) in icons" :key="index" class="flex justify-center">
       <font-awesome-icon
         :icon="icon"

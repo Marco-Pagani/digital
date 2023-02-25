@@ -10,12 +10,16 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import {
   faCircle as fasCircle,
   faCircleDot as fasCircleDot,
-  faCircleHalfStroke
+  faCircleHalfStroke,
+  faPlay,
+  faSquare,
+  faDiamond
 } from '@fortawesome/free-solid-svg-icons'
 import {
   faCircle as farCircle,
   faCircleDot as farCircleDot,
-  faClock
+  faClock,
+  faCalendarMinus
 } from '@fortawesome/free-regular-svg-icons'
 
 library.add(
@@ -24,7 +28,11 @@ library.add(
   faCircleHalfStroke,
   farCircle,
   farCircleDot,
-  faClock
+  faClock,
+  faPlay,
+  faSquare,
+  faDiamond,
+  faCalendarMinus
 )
 
 const app = createApp(App)

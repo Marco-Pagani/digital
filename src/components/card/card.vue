@@ -1,18 +1,19 @@
 <template>
-  <div class="rounded-lg w-[450px] p-6 pt-4 shadow-md" :class="`${bgColor}`">
+  <div
+    class="rounded-lg w-[90vw] max-w-[480px] h-[750px] px-6 pt-4 pb-8 shadow-md bg-gradient-to-br from-light-brown to-medium-brown"
+  >
     <header class="flex justify-between px-2">
       <h2 class="text-xl">{{ title }}</h2>
       <input
         :value="cardHeader"
         @input="$emit('update:card-header', $event.target.value)"
         :disabled="!showList || cardType === 0"
-        :class="`border-b w-28 text-right ${bgColor}`"
+        class="border-b w-28 text-right bg-transparent"
       />
     </header>
     <ul class="font-handwritten text-xl" v-if="showList">
       <card-task
         v-for="(item, index) in cardItems"
-        :colors="{ base: bgColor, focus: focusColor }"
         :key="index"
         v-model:item-text="item.text"
         v-model:item-status="item.status"

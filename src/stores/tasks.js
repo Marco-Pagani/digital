@@ -3,7 +3,8 @@ import { format, add } from 'date-fns'
 
 const getDate = () => format(new Date(), 'MM/dd/yy')
 
-const initTodos = () => [...Array(10)].fill(0).map(() => ({ status: 0, text: '' }))
+const initTodos = () =>
+  [...Array(10)].fill(0).map(() => ({ status: 0, text: '' }))
 
 const initCard = (header) => ({
   header,
