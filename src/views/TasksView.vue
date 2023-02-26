@@ -1,7 +1,7 @@
 <template>
   <section class="pt-12 p-4 flex flex-col md:flex-row justify-center gap-8">
     <div class="flex relative justify-center">
-      <card-base :data="currentCard" class="z-30" />
+      <card-base :card-data="currentCard" class="z-30" />
       <div
         class="absolute w-[85vw] max-w-[450px] h-32 -mt-4 rounded-lg z-20"
         :class="secondCardBG"
