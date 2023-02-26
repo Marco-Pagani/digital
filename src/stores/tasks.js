@@ -31,6 +31,7 @@ export const useTodos = defineStore('todos', {
     }
   },
   persist: {
-    enabled: true
+    enabled: true,
+    strategies: [{ storage: localStorage }]
   }
 })
