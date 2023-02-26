@@ -14,7 +14,7 @@ const version = APP_VERSION
     class="bg-dark-brown py-6 px-8 flex justify-between gap-6 text-sm flex-wrap"
   >
     <div class="flex items-center gap-2">
-      <img src="/footer_logo.webp" class="w-7 -mb-2" />
+      <img src="/footer_logo.webp" class="w-7 -mb-2" alt="Marco Pagani logo" />
       <p>
         Made by
         <a href="https://pagani.io" class="underline">Marco Pagani</a>

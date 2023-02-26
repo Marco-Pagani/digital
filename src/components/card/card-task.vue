@@ -7,6 +7,7 @@
       @input="$emit('update:item-text', $event.target.value)"
       class="border-b border-off-black grow px-3 bg-transparent"
       :class="inputStyles"
+      :aria-label="`list item number ${index}`"
     />
 
     <task-signal-modal
@@ -24,7 +25,8 @@ import TaskSignalModal from './task-signal-modal.vue'
 
 const props = defineProps({
   itemStatus: Number,
-  itemText: String
+  itemText: String,
+  index: Number
 })
 const emit = defineEmits(['update:item-status', 'update:item-text'])
 

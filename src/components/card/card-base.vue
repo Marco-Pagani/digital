@@ -8,6 +8,7 @@
       <input
         v-model="todos[cardData.index].header"
         :disabled="cardData.type === 0"
+        aria-label="title of the card"
         class="border-b w-28 text-right bg-transparent"
       />
     </header>
@@ -15,6 +16,7 @@
       <card-task
         v-for="(item, index) in todos[cardData.index].items"
         :key="index"
+        :index="index"
         v-model:item-text="item.text"
         v-model:item-status="item.status"
       />

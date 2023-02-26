@@ -19,19 +19,22 @@
           :type="0"
           :icon="['fas', 'play']"
           @click="currentCard = cards.today"
+          aria-label="show the 'Now' card"
         />
         <paper-button
           :type="1"
           :icon="['fas', 'square']"
           @click="currentCard = cards.later"
+          aria-label="show the 'Later' card"
         />
         <paper-button
           :type="2"
           :icon="['fas', 'diamond']"
           @click="currentCard = cards.eventually"
+          aria-label="show the 'Eventually' card"
         />
       </div>
-      <paper-button :type="2" :icon="['far', 'calendar-minus']" />
+      <!-- <paper-button :type="2" :icon="['far', 'calendar-minus']" /> -->
     </div>
   </section>
 </template>
